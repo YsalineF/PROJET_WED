@@ -4,14 +4,26 @@
   TEMPLATE PRINCIPAL
 */
  ?>
- <!DOCTYPE html>
- <html lang="en" dir="ltr">
-   <head>
-     <meta charset="utf-8">
-     <title></title>
-   </head>
-   <body>
-     <h1>Template principal</h1>
-     <?php var_dump($connexion); ?>
-   </body>
+ <!doctype html>
+ <html class="no-js" lang="zxx">
+ <head>
+     <?php include '../app/vues/templates/partials/_head.php'; ?>
+ </head>
+ <body>
+ <!-- Preloader Start -->
+
+<?php include '../app/vues/templates/partials/_preloader.php'; ?>
+
+ <!-- Preloader Start-->
+<?php include '../app/vues/templates/partials/_nav.php'; ?>
+
+ <?php include '../app/vues/templates/partials/_main.php'; ?>
+
+ <?php include '../app/vues/templates/partials/_footer.php'; ?>
+
+ <!-- JS here -->
+
+  <?php include '../app/vues/templates/partials/_scripts.php'; ?>
+
+ </body>
  </html>
