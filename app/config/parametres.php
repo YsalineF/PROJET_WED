@@ -1,7 +1,6 @@
 <?php
 /*
-  ./app/config/parametres.php
-  PARAMETRES DE L'APPLICATION
+  ../app/config/parametres.php
 */
 
 // PARAMETRES DE CONNEXION A LA DATABASE
@@ -10,6 +9,6 @@
   define('USERNAME', 'root');
   define('USERPWD',  'root');
 
-//Zones dynamiques
-$content = '';
-$title = '';
+// INITIALISATION DES ZONES DYNAMIQUES DU TEMPLATE
+  $title = "";
+  $content = "";

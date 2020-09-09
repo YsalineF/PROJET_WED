@@ -1,7 +1,6 @@
 <?php
 /*
   ./noyau/connexion.php
-  CREATION D'UNE INSTANCE PDO $connexion
 */
 
 $dsn = "mysql:host=".HOSTNAME.";dbname=".DBNAME;

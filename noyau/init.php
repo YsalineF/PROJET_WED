@@ -1,7 +1,6 @@
 <?php
 /*
   ./noyau/init.php
-  FICHIER D'INITIALISATION
 */
 
 require_once '../app/config/parametres.php';
