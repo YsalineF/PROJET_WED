@@ -9,5 +9,12 @@ Options +FollowSymlinks
 RewriteEngine on
 
 # --------------------------------------------------
+
+# ROUTE DE DETAIL D'UN POST
+# PATTERN: posts/id/slug
+# URL: index.php?postId=x
+RewriteRule ^posts\/([1-9][0-9]*)\/([a-z0-9][a-z0-9\-]*)$ index.php?postId=$1 [L]
+
+# --------------------------------------------------
 RewriteCond %{REQUEST_URI} !\.(js|css|jpg|gif|zip|png|pdf)$ [NC]
 RewriteRule ^(.*)$ index.php [L]

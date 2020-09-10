@@ -22,3 +22,18 @@ function indexAction(\PDO $connexion) {
       include '../app/vues/posts/index.php';
     $content = ob_get_clean();
 }
+
+function showAction(\PDO $connexion, int $id) {
+  // Je demande au modèle le détail d'un post que je mets dans $post
+  include_once '../app/modeles/postsModele.php';
+  $post = Posts\findOneById($connexion, $id);
+  // Je demande au modèle les tags du post que je mets dans $tags
+  include_once '../app/modeles/tagsModele.php';
+  $tags = Tags\findByPostId($connexion, $id);
+  // Je charge la vue show dans $content
+  GLOBAL $title, $content;
+  $title = $post['title'];
+  ob_start();
+    include '../app/vues/posts/show.php';
+  $content = ob_get_clean();
+}
