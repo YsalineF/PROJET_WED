@@ -10,6 +10,16 @@ RewriteEngine on
 
 # --------------------------------------------------
 
+# ROUTE DE DETAIL D'UN TAG
+# PATTERN: tags/id/slug
+# URL: index.php?tagId=x
+RewriteRule ^tags\/([1-9][0-9]*)\/([a-z0-9][a-z0-9\-]*)$ index.php?tagId=$1 [L]
+
+# ROUTE DE DETAIL D'UNE CATEGORIE
+# PATTERN: categories/id/slug
+# URL: index.php?categorieId=x
+RewriteRule ^categories\/([1-9][0-9]*)\/([a-z0-9][a-z0-9\-]*)$ index.php?categorieId=$1 [L]
+
 # ROUTE DE DETAIL D'UN POST
 # PATTERN: posts/id/slug
 # URL: index.php?postId=x

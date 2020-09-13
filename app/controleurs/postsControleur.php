@@ -7,6 +7,7 @@
 namespace App\Controleurs\Posts;
 use App\Modeles\Posts;
 use App\Modeles\Tags;
+use App\Modeles\Authors;
 
 function indexAction(\PDO $connexion) {
     // Je demande au modèle les 10 derniers posts que je mets dans $posts
@@ -30,6 +31,9 @@ function showAction(\PDO $connexion, int $id) {
   // Je demande au modèle les tags du post que je mets dans $tags
   include_once '../app/modeles/tagsModele.php';
   $tags = Tags\findByPostId($connexion, $id);
+  // Je demande au modèle les infos de l'author du post que je mets dans $author
+  include_once '../app/modeles/authorsModele.php';
+  $author = Authors\findOneById($connexion, $post['author_id']);
   // Je charge la vue show dans $content
   GLOBAL $title, $content;
   $title = $post['title'];

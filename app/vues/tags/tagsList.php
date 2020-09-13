@@ -2,7 +2,7 @@
 <ul class="list">
   <?php foreach($tags as $tag): ?>
     <li>
-        <a href="#"><?php echo $tag['name']; ?></a>
+        <a href="tags/<?php echo $tag['id']; ?>/<?php echo Noyau\Fonctions\slugify($tag['name']); ?>"><?php echo $tag['name']; ?></a>
     </li>
   <?php endforeach; ?>
 </ul>

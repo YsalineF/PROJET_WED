@@ -2,7 +2,7 @@
 <ul class="list cat-list">
   <?php foreach($categories as $categorie): ?>
     <li>
-      <a href="#" class="d-flex">
+      <a href="categories/<?php echo $categorie['id']; ?>/<?php echo Noyau\Fonctions\slugify($categorie['name']); ?>" class="d-flex">
         <p><?php echo $categorie['name']; ?></p>
         <?php foreach ($nbrePosts as $nbrePost): ?>
           <?php if($nbrePost['categorie_id'] === $categorie['id']): ?>
