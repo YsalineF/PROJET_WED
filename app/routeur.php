@@ -4,11 +4,21 @@
   ROUTEUR PRINCIPAL
 */
 
+// PAGE CONTACT
+// PATTERN: ?contact
+// CTRL: /
+// ACTION: /
+if(isset($_GET['contact'])):
+  $title = "Contact";
+  ob_start();
+    include '../app/vues/templates/partials/_contact.php';
+  $content = ob_get_clean();
+
 // DETAIL D'UN TAG
 // PATTERN: ?tagId=x
 // CTRL: tagsControleur
 // ACTION: show
-if(isset($_GET['tagId'])):
+elseif(isset($_GET['tagId'])):
   include_once '../app/controleurs/tagsControleur.php';
   \App\Controleurs\Tags\showAction($connexion, $_GET['tagId']);
 

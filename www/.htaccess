@@ -10,6 +10,11 @@ RewriteEngine on
 
 # --------------------------------------------------
 
+# ROUTE DE LA PAGE CONTACT
+# PATTERN: contact
+# URL: index.php?contact
+RewriteRule ^contact$ index.php?contact [L]
+
 # ROUTE DE DETAIL D'UN TAG
 # PATTERN: tags/id/slug
 # URL: index.php?tagId=x
