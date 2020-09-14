@@ -10,6 +10,11 @@ RewriteEngine on
 
 # --------------------------------------------------
 
+# CONNEXION
+# PATTERN: users/login/submit
+# URL: index.php?users=login
+RewriteRule ^users\/login\/submit$ index.php?users=login [L]
+
 # FORMULAIRE DE LOGIN
 # PATTERN: users/login/form
 # URL: index.php?users=loginForm

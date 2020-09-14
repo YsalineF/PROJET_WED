@@ -4,11 +4,22 @@
   ROUTEUR PRINCIPAL
 */
 
+// CONNEXION
+// PATTERN: ?users=login
+// CTRL: usersControleur
+// ACTION: login
+if(isset($_GET['users']) && $_GET['users'] == 'login'):
+  include_once '../app/controleurs/usersControleur.php';
+  \App\Controleurs\Users\loginAction($connexion, [
+    'login'    => $_POST['pseudo'],
+    'password'  => $_POST['password']
+  ]);
+
 // FORMULAIRE DE LOGIN D'UN USER
 // PATTERN: ?users=loginForm
 // CTRL: usersControleur
 // ACTION: loginForm
-if(isset($_GET['users']) && $_GET['users'] == 'loginForm'):
+elseif(isset($_GET['users']) && $_GET['users'] == 'loginForm'):
   include_once '../app/controleurs/usersControleur.php';
   \App\Controleurs\Users\loginFormAction($connexion);
 

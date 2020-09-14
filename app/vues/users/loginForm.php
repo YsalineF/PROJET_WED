@@ -1,5 +1,5 @@
 <h1>Connexion au backoffice</h1>
-<form class="" action="" method="post">
+<form class="" action="users/login/submit" method="post">
   <div class="">
     <input id="pseudo" type="text" name="pseudo" value="">
     <label for="pseudo">Pseudo</label>
