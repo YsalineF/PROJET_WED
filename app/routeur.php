@@ -4,11 +4,19 @@
   ROUTEUR PRINCIPAL
 */
 
+// RECHERCHE D'UN POST
+// PATTERN: posts/search
+// CTRL: postsControleur
+// ACTION: search
+if(isset($_POST['search'])):
+  include_once '../app/controleurs/postsControleur.php';
+  \App\Controleurs\Posts\searchAction($connexion, $_POST['search']);
+
 // PAGE CONTACT
 // PATTERN: ?contact
 // CTRL: /
 // ACTION: /
-if(isset($_GET['contact'])):
+elseif(isset($_GET['contact'])):
   $title = "Contact";
   ob_start();
     include '../app/vues/templates/partials/_contact.php';

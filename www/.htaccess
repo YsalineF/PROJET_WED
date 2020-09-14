@@ -10,6 +10,11 @@ RewriteEngine on
 
 # --------------------------------------------------
 
+# ROUTE DE LA RECHERCHE D'UN POST
+# PATTERN: posts/search
+# URL: index.php?posts=search
+RewriteRule ^posts\/(search)$ index.php?posts=search [L]
+
 # ROUTE DE LA PAGE CONTACT
 # PATTERN: contact
 # URL: index.php?contact
