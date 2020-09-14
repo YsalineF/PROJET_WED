@@ -4,11 +4,19 @@
   ROUTEUR PRINCIPAL
 */
 
+// FORMULAIRE DE LOGIN D'UN USER
+// PATTERN: ?users=loginForm
+// CTRL: usersControleur
+// ACTION: loginForm
+if(isset($_GET['users']) && $_GET['users'] == 'loginForm'):
+  include_once '../app/controleurs/usersControleur.php';
+  \App\Controleurs\Users\loginFormAction($connexion);
+
 // RECHERCHE D'UN POST
 // PATTERN: posts/search
 // CTRL: postsControleur
 // ACTION: search
-if(isset($_POST['search'])):
+elseif(isset($_POST['search'])):
   include_once '../app/controleurs/postsControleur.php';
   \App\Controleurs\Posts\searchAction($connexion, $_POST['search']);
 

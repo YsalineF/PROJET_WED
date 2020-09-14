@@ -10,10 +10,15 @@ RewriteEngine on
 
 # --------------------------------------------------
 
+# FORMULAIRE DE LOGIN
+# PATTERN: users/login/form
+# URL: index.php?users=loginForm
+RewriteRule ^users\/login\/form$ index.php?users=loginForm [L]
+
 # ROUTE DE LA RECHERCHE D'UN POST
 # PATTERN: posts/search
 # URL: index.php?posts=search
-RewriteRule ^posts\/(search)$ index.php?posts=search [L]
+RewriteRule ^posts\/search$ index.php?posts=search [L]
 
 # ROUTE DE LA PAGE CONTACT
 # PATTERN: contact
