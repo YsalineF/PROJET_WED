@@ -18,7 +18,7 @@ function indexAction(\PDO $connexion) {
     $tags = Tags\findTagsOfPost($connexion);
     // Je charge la vue posts dans $content
     GLOBAL $title, $content;
-    $title = "Blog";
+    $title = "Liste des posts";
     ob_start();
       include '../app/vues/posts/index.php';
     $content = ob_get_clean();

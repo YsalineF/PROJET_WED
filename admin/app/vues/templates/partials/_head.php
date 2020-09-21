@@ -12,7 +12,7 @@
  <meta name="author" content="">
  <link rel="icon" href="../../favicon.ico">
 
- <title>Theme Template for Bootstrap</title>
+ <title>Wedding - BACKOFFICE | <?php echo $title; ?></title>
 
  <!-- Bootstrap core CSS -->
  <!-- Font Awesome -->

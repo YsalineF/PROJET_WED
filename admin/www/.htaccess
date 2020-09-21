@@ -10,6 +10,13 @@ RewriteEngine on
 
 # --------------------------------------------------
 
+# ROUTE DES POSTS -----------------------------------------
+# LISTE DES POSTS
+# PATTERN: posts
+# URL: index.php?posts=index
+RewriteRule ^posts$ index.php?posts=index [L]
+
+# ROUTE DES USERS -----------------------------------------
 # LOGOUT USER
 # PATTERN: users/logout
 # URL: index.php?users=logout

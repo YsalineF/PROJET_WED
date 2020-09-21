@@ -14,8 +14,7 @@ function findAll(\PDO $connexion) {
               posts.image AS postImg,
               posts.created_at AS postCreatedAt
           FROM posts
-          ORDER BY created_at DESC
-          LIMIT 10;";
+          ORDER BY created_at DESC;";
   $rs = $connexion -> query($sql);
   return $rs->fetchAll(\PDO::FETCH_ASSOC);
 }
