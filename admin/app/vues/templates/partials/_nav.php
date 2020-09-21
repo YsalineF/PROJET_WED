@@ -3,36 +3,43 @@
   ./app/vues/templates/partials/_nav.php
 */
  ?>
- <header>
-     <!-- Header Start -->
-     <div class="header-area">
-             <div class="main-header header-sticky">
-                 <div class="container">
-                     <div class="row align-items-center">
-                         <!-- Logo -->
-                         <div class="col-xl-2 col-lg-2">
-                             <div class="logo">
-                                 <a href=<?php echo BASE_URL; ?>><img src="assets/img/logo/logo.png" alt=""></a>
-                             </div>
-                         </div>
-                         <div class="col-xl-10 col-lg-10 col-md-10">
-                             <!-- Main-menu -->
-                             <div class="main-menu f-right d-none d-lg-block">
-                                 <nav>
-                                     <ul id="navigation">
-                                         <li><a href="">Blog</a></li>
-                                         <li><a href="contact">Contact Us</a></li>
-                                     </ul>
-                                 </nav>
-                             </div>
-                         </div>
-                         <!-- Mobile Menu -->
-                         <div class="col-12">
-                             <div class="mobile_menu d-block d-lg-none"></div>
-                         </div>
-                     </div>
-                 </div>
-             </div>
+ <nav class="navbar navbar-inverse navbar-fixed-top">
+   <div class="container">
+     <div class="navbar-header">
+       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+         <span class="sr-only">Toggle navigation</span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+       </button>
+       <a class="navbar-brand" href="#">Bootstrap theme</a>
      </div>
-     <!-- Header End -->
- </header>
+     <div id="navbar" class="navbar-collapse collapse">
+       <ul class="nav navbar-nav">
+         <li class="active"><a href="#">Home</a></li>
+         <li><a href="#about">About</a></li>
+         <li><a href="#contact">Contact</a></li>
+         <li class="dropdown">
+           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+           <ul class="dropdown-menu">
+             <li class="dropdown-header">Categories</li>
+               <li><a href="#">Action</a></li>
+               <li><a href="#">Another action</a></li>
+               <li><a href="#">Something else here</a></li>
+             <li role="separator" class="divider"></li>
+             <li class="dropdown-header">Tags</li>
+               <li><a href="#">Action</a></li>
+               <li><a href="#">Another action</a></li>
+               <li><a href="#">Something else here</a></li>
+             <li role="separator" class="divider"></li>
+               <li class="dropdown-header">Posts</li>
+               <li><a href="#">Separated link</a></li>
+               <li><a href="#">One more separated link</a></li>
+
+           </ul>
+         </li>
+         <li><a href="users/logout">Logout</a></li>
+       </ul>
+     </div><!--/.nav-collapse -->
+   </div>
+ </nav>

@@ -4,26 +4,21 @@
   TEMPLATE PRINCIPAL
 */
  ?>
- <!doctype html>
- <html class="no-js" lang="zxx">
- <head>
+ <!DOCTYPE html>
+ <html lang="en">
+   <head>
      <?php include '../app/vues/templates/partials/_head.php'; ?>
- </head>
- <body>
- <!-- Preloader Start -->
+   </head>
 
-<?php include '../app/vues/templates/partials/_preloader.php'; ?>
+   <body>
 
- <!-- Preloader Start-->
-<?php include '../app/vues/templates/partials/_nav.php'; ?>
+     <!-- Fixed navbar -->
+     <?php include '../app/vues/templates/partials/_nav.php'; ?>
 
- <?php include '../app/vues/templates/partials/_main.php'; ?>
+     <div class="container theme-showcase" role="main">
+       <?php echo $content; ?>
+     </div> <!-- /container -->
 
- <?php include '../app/vues/templates/partials/_footer.php'; ?>
-
- <!-- JS here -->
-
-  <?php include '../app/vues/templates/partials/_scripts.php'; ?>
-
- </body>
+     <?php include '../app/vues/templates/partials/_scripts.php'; ?>
+   </body>
  </html>

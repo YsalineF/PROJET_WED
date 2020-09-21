@@ -23,6 +23,7 @@ function loginAction(\PDO $connexion, array $data = null) {
   // Je redirige vers le backoffice si les infos sont correctes
   // Ou vers le formulaire de connexion ou sinon
   if($user):
+    $_SESSION['user'] = $user;
     header('location:' . ROOT_ADMIN);
   else:
     header('location:' . ROOT . 'users/login/form');

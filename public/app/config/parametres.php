@@ -3,6 +3,8 @@
   ../app/config/parametres.php
 */
 
+session_start();
+
 // PARAMETRES DE CONNEXION A LA DATABASE
   define('HOSTNAME', 'localhost:3306');
   define('DBNAME',   'wed_project');
